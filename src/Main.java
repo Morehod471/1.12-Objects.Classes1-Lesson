@@ -1,7 +1,5 @@
 public class Main {
 
-
-
     public static void main(String[] args) {
         String[] names = {"John", "Sarah" };
         int[] ages = {13, 30};
