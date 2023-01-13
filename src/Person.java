@@ -7,7 +7,15 @@ public class Person {
         this.age = age;
     }
 
+    public Boolean isAdult() {
+        return getAge() > 18;
+    }
+
     public String getName() {
+        return this.name;
+    }
+
+    public String setName(String name) {
         return this.name;
     }
 
@@ -15,8 +23,11 @@ public class Person {
         return this.age;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void increaseAge(int increment) {
+        if (increment < 0) {
+            throw new IllegalArgumentException("Инкремент не может быть отрицательным");
+        }
+        this.age = age + increment;
     }
 
     public String toString() {
